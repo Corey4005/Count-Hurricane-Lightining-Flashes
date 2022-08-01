@@ -41,6 +41,7 @@ pip install pandas==1.0.5, geopy==2.2.0, numpy==1.21.2, matplotlib==3.5.0, netCD
 
 4. Run [main.py](./src/main.py) via the command line or from an interactive development environment. 
 ```python
+cd src/
 python main.py
 ```
 [main.py](./src/main.py) can be easily updated with a different parameters to count flashes over a different storm event. Or, because this is an object-oriented program, you could download an entire storm track [here](https://coast.noaa.gov/hurricanes/#map=4/32/-80) and generate giant dataframes of lightning flash data using a simple for loop. I intend to upload a file later showing how this can be done, so press that star button and follow along!
