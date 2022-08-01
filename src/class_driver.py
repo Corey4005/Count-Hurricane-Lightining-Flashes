@@ -76,6 +76,8 @@ class Driver(interpolate, Command):
         """
         
         print('Processing {} netCDF files now!'.format(len(self.filesDataFrame)))
+        print('\n')
+        
         df = self.mergedDataFrame
         
         flashDic = {}
