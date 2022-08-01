@@ -5,7 +5,23 @@ This repo contains the tools needed to count lightning flash events between two 
 
 Check out [main.py](./src/main.py), which shows how 17 lines of code can be used to download a large set of files automatically (in this case 540 netCDFs) via the Amazon Web Service (AWS) Command Line Interface (CLI) and analyzed to produce a plot of lightning count flashes over hurricane Ana in 2021. 
 
-The box size used to count a lightning event is 111km x 111km or ~1 degree in latitude and longitude from each point along the interpolated storm-event line. 
+Here is an example of the plot that is returned of that 3 hour period:
+
+<p align="center">
+  <img src=./src/plots/HurricaneAnaExample.png
+</p>
+
+x-axis is time and y axis is the flash counts. 
+
+Here is an image showing how interpolation points are generated between two storm-event-times:
+
+<p align="center">
+  <img src=./src/plots/interpolationExample.png
+</p>
+
+x axis is longitude and y axis is latitude. 
+
+Note: The box size used to count a lightning event is 111km x 111km or ~1 degree in latitude and longitude from each point along the interpolated storm-event line. 
 
 To use this software follow these steps: 
 
