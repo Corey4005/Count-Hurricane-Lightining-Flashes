@@ -30,6 +30,7 @@ from class_interpolate import interpolate
 from class_command import Command 
 import pandas as pd
 import netCDF4 as nc
+import matplotlib.pyplot as plt
 
 
 class Driver(interpolate, Command):
@@ -154,4 +155,11 @@ class Driver(interpolate, Command):
         print('\n')
         
         self.processedDataFrame.set_index('Time of Scan', inplace=True)
-        self.processedDataFrame['Flash Count'].plot()
+        plt.plot(self.processedDataFrame['Flash Count'])
+        plt.title('Flash Count over Time')
+        plt.xlabel('Time')
+        plt.ylabel('Flash Count')
+        plt.savefig('./plots/flashcounts.png')
+        
+        print('Plot saved to ./plots/flashcounts.png')
+        

@@ -280,8 +280,14 @@ class interpolate(Data):
         GLMLATS = self.newLats
         for i in range(len(GLMLONS)):
             plt.scatter(GLMLONS[i], GLMLATS[i])
-       
-            
+        
+        plt.xlabel('Longitude')
+        plt.ylabel('Latitude')
+        plt.title(str(int(self.nPoints)) + ' ' + 'Interpolated Points between' + ' ' + str(self.lat1) + ',' + str(self.lon1) + ' ' + 'and' + ' ' + str(self.lat2) + ',' + str(self.lon2))
+        plt.savefig('./plots/lineInterpolation.png')
+        
+        print('Plot saved to ./plots/lineInterpolation.png')
+        print('\n')
         
     
         
